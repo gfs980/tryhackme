@@ -5,6 +5,7 @@ import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 import taskRoutes from './routes/tasks'; // Import the task routes
+import userRoutes from './routes/user'; // Import the task routes
 import authRoutes from './routes/auth'; // Import the auth routes
 
 const app: Application = express();
@@ -24,7 +25,7 @@ app.get('/', (_: Request, res: Response) => {
 // Mount task routes
 app.use('/auth', authRoutes); // Mount auth routes
 app.use('/tasks', taskRoutes); // Mount tasks routes
-app.use('/user', taskRoutes); // Mount user routes
+app.use('/user', userRoutes); // Mount user routes
 
 // Connect to MongoDB
 mongoose

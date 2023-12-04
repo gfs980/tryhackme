@@ -1,5 +1,3 @@
-// src/routes/tasks.ts
-
 import express, { Request, Response } from 'express';
 import UserModel from '../models/User';
 import { authenticateUser } from '../middleware/auth';
