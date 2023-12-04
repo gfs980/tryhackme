@@ -34,3 +34,8 @@ I aimed to deliver a functional application with as much attention to code quali
 In the interest of ensuring a high-quality submission, I suggest discussing certain aspects of the task during our call, such as architectural decisions, technology choices, and security practices. This would allow for a deeper understanding of my thought process and approach to the task, without compromising the overall quality of the deliverable within the tight time frame.
 
 I am committed to delivering the best possible solution and would welcome the opportunity to further discuss and elaborate on my choices during our call. Thank you for understanding the challenges inherent in this task, and I look forward to our discussion.
+
+# How to use APP:
+
+This is how client application looks like:
+![Alt text](image.png)
