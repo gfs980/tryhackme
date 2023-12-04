@@ -39,3 +39,53 @@ I am committed to delivering the best possible solution and would welcome the op
 
 This is how client application looks like:
 ![Alt text](image.png)
+
+## To add task:
+
+![Alt text](image-1.png)
+
+1. Fill up this details. All fields required!
+
+Status:
+Add either: pending or completed (of course you can input anything in the input fields but those fields you wont be able to filter via the "Status" filter buttons)![Alt text](image-2.png)
+
+Priority:
+Add either: pending or completed (of course you can input anything in the input fields but those fields you wont be able to filter via the "Priority" filter buttons)![Alt text](image-3.png)
+
+2. Press "Add Task" button and it will add the record to DB via API
+
+Simple functionality done due to:
+
+1. something to improve
+2. lack of time
+
+## How to search:
+
+![Alt text](image-4.png)
+
+1. To search for tasks via description or title add your search key into "Enter your search query" field then press "Search" button
+2. Pagination: input page number then press "Search" button
+3. Filter via status or priority press these buttons:
+   ![Alt text](image-5.png)
+
+## Edit
+
+To edit task press on edit next to any task of your choice:
+![Alt text](image-6.png)
+once pressed the edit section will appear at the top of the page:
+![Alt text](image-7.png)
+Edit the fields you need to edit and then press "Update" button to update the record
+
+## Delete
+
+just simply press delete button next to the task that you want to delete
+
+## Login
+
+![Alt text](image-8.png)
+To login enter username and password
+the password is not required therefore you can register simply with username
+
+To register press register link
+![Alt text](image-9.png)
+the password is not required therefore you can register simply with username once submited press login
