@@ -1,0 +1,57 @@
+version: "3.3"
+
+services:
+  # nginx:
+  #   build:
+  #     context: ./nginx
+  #     dockerfile: Dockerfile.dev
+  #   restart: unless-stopped
+  #   ports:
+  #     - 80:80
+  #   depends_on:
+  #     - node
+  #     - react
+  
+  node:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.dev
+    restart: unless-stopped
+    ports:
+      - ${NODE_PORT}:${NODE_PORT}
+    volumes:
+      - ./backend/src:/app/server/src
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_URI=${MONGO_URI}
+      - MONGO_DB_NAME=${MONGO_DB_NAME}
+      - JWT_SECRET=${NODE_JWT_SECRET}
+      - PORT=${NODE_PORT}
+  
+  react:
+    ports:
+      - 3000:3000
+    build:
+      context: ./react
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./react:/app
+      - /app/node_modules
+      - /app/.next
+    links:
+      - node
+    restart: always
+    environment:
+      - NEXT_PUBLIC_API_URL=${REACT_API_URL}
+
+  mongo:
+    image: mongo:6.0.2
+    ports:
+      - 27017:27017
+    restart: always
+    volumes:
+      - mongodb-tryhackme-volume:/data/db
+
+volumes:
+  ? mongodb-tryhackme-volume
